@@ -11,6 +11,7 @@ Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) un
 buster-win will execute all tests in a folder, matching a specified pattern.
 
 * Create a folder for your tests.  Example: "test".
+* Write tests using busterjs (http://busterjs.org/).
 * Inside that folder create a file "index.js" with the code below.
 
 ```javascript
