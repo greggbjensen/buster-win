@@ -1,0 +1,35 @@
+{
+    "name": "buster-win",
+    "version": "0.0.1",
+    "description": "Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) until v1 is released with full support.",
+    "main": "lib/buster-win.js",
+    "dependencies": {
+        "buster": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/greggjensen/buster-win.git"
+    },
+    "author": {
+        "name": "Gregg Jensen",
+        "email": "gjensen64@gmail.com",
+        "url": "https://github.com/greggjensen/buster-win"
+    },
+    "contributors": [
+        {
+            "name": "Jon Dunn",
+            "email": "jondunndev@gmail.com"
+        }
+    ],
+    "keywords": [
+        "buster",
+        "busterjs",
+        "windows",
+        "test",
+        "unit"
+    ],
+    "license": "MIT/X11",
+    "engine": {
+        "node": ">=0.4.0"
+    }
+}
