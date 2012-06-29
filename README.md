@@ -21,4 +21,6 @@ buster-win will execute all tests in a folder, matching a specified pattern.
 
 * Run the following command where "test" is the name of the folder containing your tests.
 
-    node test
+```
+node test
+```
