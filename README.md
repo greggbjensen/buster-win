@@ -6,6 +6,9 @@ Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) un
 ## Installation
     npm install buster-win
 
+### Note
+Install buster-win alongside buster. Buster-Win simply acts as a Windows test runner.
+
 ## Usage
 
 buster-win will execute all tests in a folder, matching a specified pattern.
