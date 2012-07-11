@@ -6,3 +6,15 @@ config["Node tests"] = {
         "node/**/*-test.js"
     ]
 };
+
+config["Browser tests"] = {
+    environment: "browser",
+    rootPath: "../",
+    sources: [
+        "lib/mylib.js",
+        "lib/**/*.js"
+    ],
+    tests: [
+        "test/*-test.js"
+    ]
+};
