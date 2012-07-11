@@ -21,7 +21,7 @@ buster-win will execute all tests in a folder, matching a specified pattern.
         buster.js
         index.js
         first-test.js
-        second-test.js
+        second-test.js 
 
 * A file "index.js" with the code below.
 
