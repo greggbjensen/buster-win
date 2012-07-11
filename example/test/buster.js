@@ -10,11 +10,13 @@ config["Node tests"] = {
 config["Browser tests"] = {
     environment: "browser",
     rootPath: "../",
+    libs: [
+        "lib/*.js"
+    ],
     sources: [
-        "lib/mylib.js",
-        "lib/**/*.js"
+        "sources/core.js"
     ],
     tests: [
-        "test/*-test.js"
+        "test/**/*-test.js"
     ]
 };
