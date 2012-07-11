@@ -15,6 +15,7 @@ Install buster-win alongside buster. Buster-Win simply acts as a Windows test ru
 buster-win will execute all tests in a folder, matching a specified pattern.
 
 * Create a folder for your tests.  Example: "test".
+
 Inside that folder create the following:
 
 
