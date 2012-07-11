@@ -20,7 +20,7 @@ buster-win will execute all tests in a folder, matching a specified pattern.
 ** A file "index.js" with the code below.
 
 ```javascript
-    require('../../lib/buster-win').execute(__dirname);
+require('../../lib/buster-win').execute(__dirname);
 ```
 
 * Run the following command where "test" is the name of the folder containing your tests.
