@@ -13,6 +13,7 @@ config["Browser tests"] = {
     libs: [
         "lib/*.js"
     ],
+    stayOpen: false,
     sources: [
         "sources/core.js"
     ],
