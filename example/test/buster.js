@@ -17,6 +17,6 @@ config["Browser tests"] = {
         "sources/core.js"
     ],
     tests: [
-        "test/**/*-test.js"
+        "test/browser/**/*-test.js"
     ]
 };

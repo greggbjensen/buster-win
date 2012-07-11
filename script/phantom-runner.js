@@ -23,3 +23,5 @@ page.open('http://localhost:' + 1111, function(status) {
         };
     }
 });
+
+phantom.exit(0);

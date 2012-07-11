@@ -1,4 +1,3 @@
-var buster = require('buster');
 buster.spec.expose(); // Make some functions global
 
 describe("A module", function () {
