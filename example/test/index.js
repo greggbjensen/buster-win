@@ -1,0 +1,1 @@
+require('../../lib/buster-win').execute(__dirname);

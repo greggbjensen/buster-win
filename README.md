@@ -15,12 +15,12 @@ buster-win will execute all tests in a folder, matching a specified pattern.
 
 * Create a folder for your tests.  Example: "test".
 * Write tests using busterjs (http://busterjs.org/).
-* Inside that folder create a file "index.js" with the code below.
+* Inside that folder create the following:
+** A "buster.js" config file.
+** A file "index.js" with the code below.
 
 ```javascript
-    var BusterWin = require('buster-win');
-    var busterWin = new BusterWin({ tests: /-test\.js$/i });
-    busterWin.run(__dirname);
+    require('../../lib/buster-win').execute(__dirname);
 ```
 
 * Run the following command where "test" is the name of the folder containing your tests.
