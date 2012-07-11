@@ -15,13 +15,14 @@ Install buster-win alongside buster. Buster-Win simply acts as a Windows test ru
 buster-win will execute all tests in a folder, matching a specified pattern.
 
 * Create a folder for your tests.  Example: "test".
-* Inside that folder create the following:
+Inside that folder create the following:
+
 
     test/
         buster.js
         index.js
         first-test.js
-        second-test.js 
+        second-test.js
 
 * A file "index.js" with the code below.
 
