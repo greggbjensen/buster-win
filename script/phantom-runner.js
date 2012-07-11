@@ -1,7 +1,9 @@
+console.log('started');
 phantom.silent = false;
 
+var port = phantom.args[0];
 var page = require('webpage').create();
-page.open(captureUrl, function(status) {
+page.open('http://localhost:' + 1111, function(status) {
     if(!phantom.silent) {
         console.log(status);
         if (status !== 'success') {
