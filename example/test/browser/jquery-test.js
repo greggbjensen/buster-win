@@ -1,7 +1,8 @@
-buster.spec.expose(); // Make some functions global
+buster.spec.expose(); // Make some functions global.
 
-describe("A module", function () {
+describe("jquery", function () {
     it("states the obvious", function () {
         expect(true).toEqual(true);
+        console.log('jquery log');
     });
 });

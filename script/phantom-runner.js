@@ -1,9 +1,9 @@
-console.log('started');
 phantom.silent = false;
+var url = phantom.args[0];
 
-var port = phantom.args[0];
 var page = require('webpage').create();
-page.open('http://localhost:' + 1111, function(status) {
+page.open(url, function(status) {
+    try {
     if(!phantom.silent) {
         console.log(status);
         if (status !== 'success') {
@@ -21,7 +21,25 @@ page.open('http://localhost:' + 1111, function(status) {
         page.onAlert = function(msg) {
             console.log(msg);
         };
-    }
-});
 
-phantom.exit(0);
+        page.onError = function (msg, trace) {
+            console.log(msg, trace);
+        };
+
+/*        buster.eventEmitter.on('suite:start', function(){
+            console.log('start', arguments);
+        });
+
+        buster.eventEmitter.on('suite:end', function(){
+            phantom.exit(0);
+        });*/
+
+        // console.log(buster);
+    }
+
+    } catch(err) {
+        console.log(err);
+        phantom.exit(0);
+    }
+    phantom.exit(0);
+});
