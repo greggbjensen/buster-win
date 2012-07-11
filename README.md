@@ -21,6 +21,7 @@ buster-win will execute all tests in a folder, matching a specified pattern.
 require('buster-win').execute(__dirname);
 ```
 ** A "buster.js" config file.
+
 ```javascript
 var config = module.exports;
 
@@ -43,7 +44,9 @@ config["Browser tests"] = {
     ]
 };
 ```
+
 ** Tests using busterjs (http://busterjs.org/).
+
 ```javascript
 var buster = require('buster');
 buster.spec.expose();
