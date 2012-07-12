@@ -1,7 +1,11 @@
 buster.spec.expose(); // Make some functions global.
 
 describe("jquery", function () {
-    it("states the obvious", function (done) {
-        expect(true).toEqual(true);
+    it("trims a string.", function () {
+        expect(jQuery.trim('  extra space      ')).toBe('extra space');
+    });
+
+    it("tests for an array.", function () {
+        expect(jQuery.isArray([1, 3, 4])).toBe(true);
     });
 });
