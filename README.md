@@ -13,6 +13,25 @@ npm install buster
 npm install buster-win
 </pre>
 
+### Using to package.json
+
+If your project has a package.json, by doing the following:
+
+Add "devDependencies" to the package.json file as below.
+
+```javascript
+{
+    "devDependencies": {
+        "buster": "*",
+        "buster-win": "*"
+    }
+}
+```
+
+Run the following.
+
+    npm install -dev
+
 ### Note
 Install buster-win alongside buster. Buster-Win simply acts as a Windows test runner.
 
