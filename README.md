@@ -9,8 +9,8 @@ Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) un
 3. Use npm to install depedencies for node.
 
 <pre>
-    npm install buster
-    npm install buster-win
+npm install buster
+npm install buster-win
 </pre>
 
 ### Note
