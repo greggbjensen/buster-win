@@ -122,11 +122,11 @@ To debug Node scripts in WebStorm, simply follow the steps in "Run With WebStorm
 
 To debug Browser script, do the following:
 
-* Add "stayOpen" to the configuration for the browser test as below.
+* Add "autoRun: false" to the configuration for the browser test as below.
 
 ```javascript
 config["Browser tests"] = {
-    stayOpen: true,
+    autoRun: false,
     environment: "browser",
     rootPath: "../",
     sources: [
