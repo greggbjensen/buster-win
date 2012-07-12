@@ -4,7 +4,7 @@ buster.spec.expose(); // Make some functions global
 var fs = require('fs');
 var path = require('path');
 
-describe("node", function () {
+describe("fs", function () {
 
     it("can check if a file exists.", function (done) {
 
