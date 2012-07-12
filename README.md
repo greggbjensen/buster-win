@@ -13,9 +13,9 @@ npm install buster
 npm install buster-win
 </pre>
 
-### Using to package.json
+### Using package.json to install
 
-If your project has a package.json, by doing the following:
+If your project has a package.json, you can install by doing the following:
 
 Add "devDependencies" to the package.json file as below.
 
@@ -28,7 +28,7 @@ Add "devDependencies" to the package.json file as below.
 }
 ```
 
-Run the following.
+Run the npm command below.
 
     npm install -dev
 
