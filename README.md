@@ -95,4 +95,4 @@ node test
 
 ## Additional Documentation
 
-All additional documentation can be found at http://busterjs.org.
+All additional documentation can be found at http://busterjs.org/docs/.
