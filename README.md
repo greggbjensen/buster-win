@@ -122,7 +122,7 @@ To debug Node scripts in WebStorm, simply follow the steps in "Run With WebStorm
 
 To debug Browser script, do the following:
 
-1. Add "stayOpen" to the configuration for the browser test as below.
+* Add "stayOpen" to the configuration for the browser test as below.
 
 ```javascript
 config["Browser tests"] = {
@@ -139,9 +139,9 @@ config["Browser tests"] = {
 };
 ```
 
-2. Run the tests normally.
-3. Open a Browser and go to http://localhost:1111.
-4. Open the Browser debug tools.
+* Run the tests normally.
+* Open a Browser and go to http://localhost:1111.
+* Open the Browser debug tools.
 
 
 ## Additional Documentation
