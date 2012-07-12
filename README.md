@@ -62,7 +62,7 @@ config["Browser tests"] = {
 };
 ```
 
-* Tests using busterjs (http://busterjs.org/).
+* Tests using busterjs (http://busterjs.org).
 
 ```javascript
 var buster = require('buster');
@@ -84,3 +84,15 @@ describe("My thing", function () {
 ```
 node test
 ```
+
+### Run With WebStorm
+
+1. Go to the "Run" menu and choose "Edit configurations...".
+2. Click on the "+" icon and choose "Node JS".
+3. Set "Working Directory" to the location of your "test" folder.
+4. Set "Path to Node App JS File" to "index.js" and click "OK".
+5. Click on the play icon next to your configuration in the toolbar.
+
+## Additional Documentation
+
+All additional documentation can be found at http://busterjs.org.
