@@ -142,6 +142,8 @@ config["Browser tests"] = {
 * Run the tests normally.
 * Open a Browser and go to http://localhost:1111.
 * Open the Browser debug tools.
+* Put a breakpoint in the test you would like to debug.
+* Refresh the page.
 
 
 ## Additional Documentation
