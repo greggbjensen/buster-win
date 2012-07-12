@@ -62,7 +62,7 @@ require('buster-win').execute(__dirname);
 var config = module.exports;
 
 config["Node tests"] = {
-    env: "node",
+    environment: "node",
     tests: [
         "**/*-test.js"
     ]
