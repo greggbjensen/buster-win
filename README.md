@@ -4,8 +4,8 @@ buster-win
 Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) until v1 is released with full support.
 
 ## Installation
-1. Download phantom.js from http://phantomjs.org.
-2. Add path to phantom.js to PATH environment variable.
+1. Download phantomjs from http://phantomjs.org.
+2. Add path to "phantomjs.exe" to PATH environment variable.
 3. Use npm to install depedencies for node.
 
     npm install buster
