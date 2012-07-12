@@ -1,10 +1,7 @@
-console.log('jquery-test');
-
 buster.spec.expose(); // Make some functions global.
 
 describe("jquery", function () {
-    it("states the obvious", function () {
+    it("states the obvious", function (done) {
         expect(true).toEqual(true);
-        console.log('test 1');
     });
 });

@@ -1,45 +1,41 @@
 phantom.silent = false;
 var url = phantom.args[0];
-
 var page = require('webpage').create();
+
+var formatLog = function(msg) {
+
+    // Encode newlines so only correct newlines will be decoded.
+    console.log(msg.replace(/\r|\f|\n|\v/g, '\\n'))
+};
+
 page.open(url, function(status) {
     if(!phantom.silent) {
         if (status !== 'success') {
-            console.log('phantomjs failed to connect');
+            formatLog('phantomjs failed to connect');
             phantom.exit(1);
         }
 
         page.onConsoleMessage = function (msg) {
-            console.log(msg);
 
             // Listen for complete log message.
             if (/^Browser tests complete.$/.test(msg)) {
-                phantom.exit();
+
+                // Give log time to complete.
+                setTimeout(function() {
+                    phantom.exit();
+                }, 1);
+            }
+            else {
+                formatLog(msg);
             }
         };
 
         page.onAlert = function(msg) {
-            console.log(msg);
+            formatLog('alert >>' + msg);
         };
 
         page.onError = function (msg, trace) {
-            console.log(msg, trace);
+            formatLog(msg + trace.toString());
         };
-
-        page.evaluate(function() {
-
-            // Track suites to make sure all are closed.
-            var suiteCount = 0;
-            buster.eventEmitter.on('suite:start', function(){
-                suiteCount++;
-            });
-
-            buster.eventEmitter.on('suite:end', function(){
-                suiteCount--;
-                if (suiteCount === 0) {
-                    console.log('Browser tests complete.');
-                }
-            });
-        });
     }
 });
