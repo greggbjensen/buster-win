@@ -69,7 +69,7 @@ config["Node tests"] = {
 };
 
 config["Browser tests"] = {
-    environment: "browser", // or "node"
+    environment: "browser",
     rootPath: "../",
     sources: [
         "lib/mylib.js", // Paths are relative to config file
@@ -111,6 +111,37 @@ node test
 3. Set "Working Directory" to the location of your "test" folder.
 4. Set "Path to Node App JS File" to "index.js" and click "OK".
 5. Click on the play icon next to your configuration in the toolbar.
+
+## Debugging
+
+### Node Debugging
+
+To debug Node scripts in WebStorm, simply follow the steps in "Run With WebStorm", but run in configuration in debug mode.
+
+### Browser Debugging
+
+To debug Browser script, do the following:
+
+1. Add "stayOpen" to the configuration for the browser test as below.
+```javascript
+config["Browser tests"] = {
+    stayOpen: true,
+    environment: "browser",
+    rootPath: "../",
+    sources: [
+        "lib/mylib.js",
+        "lib/**/*.js"
+    ],
+    tests: [
+        "test/*-test.js"
+    ]
+};
+```
+
+2. Run the tests normally.
+3. Open a Browser and go to http://localhost:1111.
+4. Open the Browser debug tools.
+
 
 ## Additional Documentation
 
