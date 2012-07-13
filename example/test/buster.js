@@ -3,11 +3,12 @@ var config = module.exports;
 config["Node tests"] = {
     environment: "node",
     tests: [
-        "node/**/*-test.js"
+       "node/**/*-test.js"
     ]
 };
 
 config["Browser tests"] = {
+    autoRun: true,
     environment: "browser",
     rootPath: "../",
     libs: [
