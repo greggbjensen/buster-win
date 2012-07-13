@@ -8,7 +8,7 @@ describe("fs", function () {
 
     it("can check if a file exists.", function (done) {
 
-        fs.exists(path.join(__dirname, 'fs-test.js'), function(exists){
+        fs.exists(__filename, function(exists){
            done(function(){
                expect(exists).toEqual(true);
            })();
@@ -16,7 +16,7 @@ describe("fs", function () {
     });
 
     it("Can check if something is a file.", function (done) {
-        fs.stat(path.join(__dirname, 'fs-test.js'), function(err, stat){
+        fs.stat(__filename, function(err, stat){
             done(function(){
                 expect(stat.isFile()).toEqual(true);
             })();
