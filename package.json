@@ -1,6 +1,6 @@
 {
     "name": "buster-win",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) until v1 is released with full support.",
     "main": "lib/buster-win.js",
     "dependencies": {
