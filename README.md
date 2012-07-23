@@ -8,8 +8,10 @@ Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) un
 2. Add path to directory containing "phantomjs.exe" to PATH environment variable.
 3. Use npm to install depedencies for node.
 
-    npm install buster
-    npm install buster-win
+<pre>
+npm install buster
+npm install buster-win
+</pre>
 
 ### Using package.json to install
 
@@ -17,12 +19,14 @@ If your project has a package.json, you can install by doing the following:
 
 Add "devDependencies" to the package.json file as below.
 
-    {
-        "devDependencies": {
-            "buster": "*",
-            "buster-win": "*"
-        }
+```javascript
+{
+    "devDependencies": {
+        "buster": "*",
+        "buster-win": "*"
     }
+}
+```
 
 Run the npm command below.
 
@@ -45,49 +49,57 @@ Inside that folder create the following:
 
 * A file "index.js" with the code below.
 
-    require('buster-win').execute(__dirname);
+```javascript
+require('buster-win').execute(__dirname);
+```
 
 * A "buster.js" config file.
 
-    var config = module.exports;
+```javascript
+var config = module.exports;
 
-    config["Node tests"] = {
-        environment: "node",
-        tests: [
-            "**/*-test.js"
-        ]
-    };
+config["Node tests"] = {
+    environment: "node",
+    tests: [
+        "**/*-test.js"
+    ]
+};
 
-    config["Browser tests"] = {
-        environment: "browser",
-        rootPath: "../",
-        sources: [
-            "lib/mylib.js", // Paths are relative to config file
-            "lib/**/*.js"   // Glob patterns supported
-        ],
-        tests: [
-            "test/*-test.js"
-        ]
-    };
+config["Browser tests"] = {
+    environment: "browser",
+    rootPath: "../",
+    sources: [
+        "lib/mylib.js", // Paths are relative to config file
+        "lib/**/*.js"   // Glob patterns supported
+    ],
+    tests: [
+        "test/*-test.js"
+    ]
+};
+```
 
 * Tests using busterjs (http://busterjs.org).
 
-    var buster = require('buster');
-    buster.spec.expose();
+```javascript
+var buster = require('buster');
+buster.spec.expose();
 
-    describe("My thing", function () {
-        it("has the foo and bar", function () {
-            expect("foo").toEqual("bar");
-        });
-
-        it("states the obvious", function () {
-            expect(true).toBe(true);
-        });
+describe("My thing", function () {
+    it("has the foo and bar", function () {
+        expect("foo").toEqual("bar");
     });
+
+    it("states the obvious", function () {
+        expect(true).toBe(true);
+    });
+});
+```
 
 * Run the following command where "test" is the name of the folder containing your tests.
 
-    node test
+```
+node test
+```
 
 ### Run With WebStorm
 
@@ -109,18 +121,20 @@ To debug Browser script, do the following:
 
 * Add "autoRun: false" to the configuration for the browser test as below.
 
-    config["Browser tests"] = {
-        autoRun: false,
-        environment: "browser",
-        rootPath: "../",
-        sources: [
-            "lib/mylib.js",
-            "lib/**/*.js"
-        ],
-        tests: [
-            "test/*-test.js"
-        ]
-    };
+```javascript
+config["Browser tests"] = {
+    autoRun: false,
+    environment: "browser",
+    rootPath: "../",
+    sources: [
+        "lib/mylib.js",
+        "lib/**/*.js"
+    ],
+    tests: [
+        "test/*-test.js"
+    ]
+};
+```
 
 * Run the tests normally.
 * Open a Browser and go to http://localhost:1111.
@@ -131,4 +145,4 @@ To debug Browser script, do the following:
 
 ## Additional Documentation
 
-All additional documentation can be found at http://busterjs.org/docs/.
+All additional documentation can be found at the official [BusterJS Site](http://busterjs.org/docs/)
