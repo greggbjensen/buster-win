@@ -8,7 +8,7 @@ config["Node tests"] = {
 };
 
 config["Browser tests"] = {
-    autoRun: true,
+    autoRun: false,
     environment: "browser",
     rootPath: "../",
     libs: [
@@ -17,6 +17,21 @@ config["Browser tests"] = {
     sources: [
         "sources/core.js"
     ],
+    routes: {
+        '/hello/world': {
+            get: function (req, res) {
+                res.writeHead(200, {"Content-Type": "text/plain"});
+                res.write('hello world');
+                res.end();
+            }
+        },
+        '/hello/:name': {
+            get: function (req, res) {
+                res.write('Hi ' + req.params[name]);
+                res.end();
+            }
+        }
+    },
     tests: [
         "test/browser/**/*-test.js"
     ]
