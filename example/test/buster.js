@@ -27,7 +27,15 @@ config["Browser tests"] = {
         },
         '/hello/:name': {
             get: function (req, res) {
-                res.write('Hi ' + req.params[name]);
+                res.writeHead(200, {"Content-Type": "text/plain"});
+                res.write('Hi ' + req.params.name);
+                res.end();
+            }
+        },
+        '/hello/:name/i/love/to/eat/:fruit': {
+            get: function (req, res) {
+                res.writeHead(200, {"Content-Type": 'text/plain'});
+                res.write('Hi ' + req.params.name + '. Disco Stew loves to eat ' + req.params.fruit);
                 res.end();
             }
         }
