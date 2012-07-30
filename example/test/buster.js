@@ -32,6 +32,13 @@ config["Browser tests"] = {
                 res.end();
             }
         },
+        '/test': {
+            get: function (req, res) {
+                res.writeHead(200, {"Content-Type": "text/plain"});
+                res.write('hi ' + req.params.name);
+                res.end();
+            }
+        },
         '/hello/:name/i/love/to/eat/:fruit': {
             get: function (req, res) {
                 res.writeHead(200, {"Content-Type": 'text/plain'});
