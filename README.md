@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/greggjensen/buster-win.png)](http://travis-ci.org/greggjensen/buster-win)
 buster-win
 ==========
 
