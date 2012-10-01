@@ -4,7 +4,7 @@
     "description": "Temporary Windows harness for busterjs (A browser JavaScript testing toolkit) until v1 is released with full support.",
     "main": "lib/buster-win.js",
     "dependencies": {
-        "underscore": "*",
+        "underscore": "1.3.x",
         "glob": "*"
     },
     "repository": {
